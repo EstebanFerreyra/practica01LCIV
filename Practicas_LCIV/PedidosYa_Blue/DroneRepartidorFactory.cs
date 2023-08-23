@@ -2,9 +2,9 @@
 {
     class DronRepartidorFactory : RepartidorFactory
     {
-        public override Repartidor CrearRepartidor()
+        public override Repartidor CrearRepartidor(int id)
         {
-            return new DronRepartidor();
+            return new DronRepartidor(id);
         }
     }
 }

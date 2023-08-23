@@ -3,8 +3,15 @@
 RepartidorFactory dronFactory = new DronRepartidorFactory();
 DronManager dronManager = new DronManager(dronFactory);
 
-dronManager.AgregarDron();
-dronManager.AgregarDron();
+Console.WriteLine("Ingrese el id del primer drone");
+dronManager.AgregarDron(Int32.Parse(Console.ReadLine()));
+Console.WriteLine("Ingrese el id del segundo drone");
+dronManager.AgregarDron(Int32.Parse(Console.ReadLine()));
+
+dronManager.MostrarDrones();
+
+Console.WriteLine("Ingrese el id del dron que desea eliminar: ");
+dronManager.BorrrarDron(Int32.Parse(Console.ReadLine()));
 
 dronManager.MostrarDrones();
 
